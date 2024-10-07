@@ -35,16 +35,16 @@ import 'package:viva_wallet_pos/viva_wallet_pos.dart';
 VivaWalletPos pos = VivaWalletpos();
 
 try {
-TransactionResponse response = await pos.sale(
-clientTransactionId: 'Invoice 1234',
-amount: 10.00,
-showRating: false,
-showReceipt: true,
-showTransactionResult: false,
-);
-_resultMessage(response.message);
+	TransactionResponse response = await pos.sale(
+		clientTransactionId: 'Invoice 1234',
+		amount: 10.00,
+		showRating: false,
+		showReceipt: true,
+		showTransactionResult: false,
+	);
+	_resultMessage(response.message);
 } catch (e) {
-debugPrint(e.toString());
+	debugPrint(e.toString());
 }
 ```
 
@@ -55,19 +55,19 @@ import 'package:viva_wallet_pos/viva_wallet_pos.dart';
 VivaWalletPos pos = VivaWalletpos();
 
 try {
-final response = await pos.isvSale(
-amount: 10.0,
-tipAmount: 0.2,
-isvAmount: 0.1,
-clientTransactionId: 'CLIENT_TRANS_ID',
-isvClientId: 'ISV_CLIENT_ID',
-isvClientSecret: 'ISV_CLIENT_SECRET',
-isvMerchantId: 'ISV_MERCHANT_ID',
-isvClientTransactionId: 'ISV_CLIENT_TRANS_ID',
-);
-_resultMessage(response.message);
+	final response = await pos.isvSale(
+		amount: 10.0,
+		tipAmount: 0.2,
+		isvAmount: 0.1,
+		clientTransactionId: 'CLIENT_TRANS_ID',
+		isvClientId: 'ISV_CLIENT_ID',
+		isvClientSecret: 'ISV_CLIENT_SECRET',
+		isvMerchantId: 'ISV_MERCHANT_ID',
+		isvClientTransactionId: 'ISV_CLIENT_TRANS_ID',
+	);
+	_resultMessage(response.message);
 } catch (e) {
-debugPrint(e.toString());
+	debugPrint(e.toString());
 }
 ```
 
